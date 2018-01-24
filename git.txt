@@ -1,0 +1,72 @@
+git config
+Sets configuration values for your user name, email, gpg key, preferred diff algorithm, file formats and more. Examples:
+
+1
+2
+git config --global user.name "My Name"
+git config --global user.email "user@domain.com"
+git init
+Initializes a git repository – creates the initial .git directory in a new or in an existing project. Example:
+
+1
+2
+3
+git init
+ 
+Initialized empty Git repository in /home/username/GIT/.git/
+git clone
+Creates a GIT repository copy from a remote source. Also adds the original location as a remote so you can fetch from it again and push to it if you have permissions. Example:
+
+1
+git clone git@github.com:user/test.git
+git add
+Adds files changes in your working directory to your index. Example:
+
+1
+git add .
+git rm
+Removes files from your index and your working directory so they will not be tracked. Example:
+
+1
+git rm filename
+git commit
+Takes all of the changes written in the index, creates a new commit object pointing to it and sets the branch to point to that new commit. Examples:
+
+1
+2
+git commit -m ‘committing added changes’
+git commit -a -m ‘committing all changes, equals to git add and git commit’
+git status
+Shows you the status of files in the index versus the working directory. It will list out files that are untracked (only in your working directory), modified (tracked but not yet updated in your index), and staged (added to your index and ready for committing). Example:
+
+1
+2
+3
+4
+5
+6
+7
+8
+git status
+ 
+# On branch master #
+# Initial commit #
+# Untracked files: #
+# (use "git add <file>..." to include in what will be committed) #
+ 
+README
+git branch
+Lists existing branches, including remote branches if ‘-a’ is provided. Creates a new branch if a branch name is provided. Example:
+
+1
+git branch -a * master remotes/origin/master
+git merge
+Merges one or more branches into your current branch and automatically creates a new commit if there are no conflicts. Example:
+
+1
+git merge newbranchversion
+git reset
+Resets your index and working directory to the state of your last commit. Example:
+
+1
+git reset --hard HEAD
